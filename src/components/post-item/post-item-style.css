@@ -1,0 +1,13 @@
+.post-item {
+    margin: 0 15px 20px;
+    flex: 0 0 calc(33.3333% - 15px * 2);
+    background: white;
+}
+
+.post-item .post-content h2 {
+    margin: 0 0 10px;
+}
+
+.post-content {
+    padding: 20px;
+}
