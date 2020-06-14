@@ -1,16 +1,13 @@
-import React, { Component } from 'react'
-import Loading from '../loading/loading-component'
+import React from "react";
+import Loading from "../loading/loading-component";
 
 const withLoading = (WrappedComponent) => {
-    return class ComponentWithLoading extends Component {
-        render() {
-            const { isLoading } = this.props
+    return function ComponentWithLoading(props) {
+        const { isLoading } = props;
 
-            if (isLoading) return <Loading />
-            return <WrappedComponent {...this.props} />
-        }
-    }
-}
+        if (isLoading) return <Loading />;
+        return <WrappedComponent {...props} />;
+    };
+};
 
-
-export default withLoading
+export default withLoading;
